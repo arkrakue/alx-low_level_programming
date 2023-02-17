@@ -4,14 +4,16 @@
  * Return: 0 (Success)
  */
 int main(void)
-{	char small;
-	char big;
+{	char smallbig;
 
-	for (small = 'a'; small <= 'z'; small++)
-		putchar(small);
-	for (big = 'A'; big <= 'Z'; big++)
-		putchar(big);
+	for (smallbig = 'a'; smallbig <= 'z'; smallbig++)
+	{
+		putchar(smallbig);
+	}
+	for (smallbig = 'A'; smallbig <= 'Z'; smallbig++)
+	{
+		putchar(smallbig);
+	}
 		putchar('\n');
 	return (0);
-
 }
