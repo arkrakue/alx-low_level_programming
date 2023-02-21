@@ -8,14 +8,14 @@
 
 int main(void)
 {	char put[9] = "_putchar";
-	int i;
+	int a;
 
-	for (i = 0; i < 9; i++)
-	{	_putchar(word[i]);
+	for (a = 0; a < 9; a++)
+	{	_putchar(put[a]);
 		_putchar('\n');
 
 	return (0);
-	
 	}
+
 	return (0);
 }
