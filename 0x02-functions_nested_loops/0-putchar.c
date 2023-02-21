@@ -12,10 +12,10 @@ int main(void)
 
 	for (a = 0; a < 8; a++)
 	{	_putchar(put[a]);
-		_putchar('\n');
 
 	return (0);
 	}
+		_putchar('\n');
 
 	return (0);
 }
