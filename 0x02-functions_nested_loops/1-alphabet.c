@@ -3,9 +3,12 @@
  * print_alphabet - the function used in the code
  * Return: void
  */
-void print_alphabet(void){
+
+void print_alphabet(void)
+{
 	char a;
-	for(a ='a'; a <= 'z'; a++)
+
+	for (a = 'a'; a <= 'z'; a++)
 	{
 		_putchar(a);
 	}
