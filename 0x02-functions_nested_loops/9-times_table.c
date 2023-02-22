@@ -8,6 +8,8 @@ void times_table(void)
 	int m;
 	int n;
 	int x;
+	int y;
+	int o;
 
 	for (m = 0; m <= 9; m++)
 	{
@@ -15,19 +17,26 @@ void times_table(void)
 		for (n = 0; n <= 9; n++)
 		{
 			x = m * n;
-			_putchar(44);
-			_putchar(32);
-			if (x <= 9)
+			if (x > 9)
 			{
-			_putchar(32);
-			_putchar(x + 48);
+				y = x % 10;
+				o = (x - y) / 10;
+				_putchar(44);
+				_putchar(32);
+				_putchar(o + '0');
+				_putchar(y + '0');
 			}
 			else
 			{
-			_putchar((x / 10) + 48);
-			_putchar((x % 10) + 48);
+				if (n != 0)
+				{
+				_putchar(44);
+				_putchar(32);
+				_putchar(32);
+				}
+			_putchar(x + '0');
 			}
 		}
-	_putchar('\n');
+		_putchar('\n');
 	}
 }
