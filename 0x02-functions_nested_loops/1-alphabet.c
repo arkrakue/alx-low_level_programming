@@ -1,24 +1,14 @@
-#include <stdio.h>
-//#include <main.h>
-#include <stdlib.h>
+#include "main.h"
 /**
  * print_alphabet - the function used in the code
- * main - the code entry of the program
- * Return: 0 (Success)
+ * Return: void
  */
 void print_alphabet(void){
 	char a;
 	for(a ='a'; a <= 'z'; a++)
 	{
-		putchar(a);
-		putchar('\n');
-	return ;
+		_putchar(a);
 	}
+		_putchar('\n');
 
-
-	return ;
-}
-int main(void){
-		print_alphabet;
-	return (0);
 }
