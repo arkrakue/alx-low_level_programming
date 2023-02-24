@@ -4,7 +4,7 @@
 /**
  * print_triangle -prints a triangle inside
  * the terminal
- * @n: type int
+ * @size: type int
  * Return: void
  */
 
