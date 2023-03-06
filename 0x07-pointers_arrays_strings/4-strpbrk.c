@@ -12,8 +12,8 @@
 char *_strpbrk(char *s, char *accept)
 {
 	char *start;
-	
-	start= accept;
+
+	start = accept;
 	while (*s)
 	{
 		while (*accept)
