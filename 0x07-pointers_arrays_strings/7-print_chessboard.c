@@ -12,6 +12,7 @@ void print_chessboard(char (*a)[8])
 	int row_value;
 	int columns;
 
+
 	row_value = 8;
 	for (rows = 0; rows < row_value; rows++)
 	{
