@@ -1,6 +1,9 @@
 #ifndef LISTS_H
 #define LISTS_H
 #include <stdlib.h>
+#include <stddef.h>
+
+int _putchar(char c);
 
 /**
  * struct node - Singly linked list
@@ -11,9 +14,7 @@
  * Description: Singly linked list node structure
  */
 
-int _putchar(char *c);
-
- struct node
+struct node
 {
 	char *str;
 	int len;
