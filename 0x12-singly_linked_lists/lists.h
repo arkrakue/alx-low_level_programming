@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 /**
- * struct list_s - Singly linked list
+ * struct node - Singly linked list
  * @str: String - (malloc'ed string)
  * @len: Length of the string
  * @next: Points to the next node
@@ -11,12 +11,11 @@
  * Description: Singly linked list node structure
  */
 
-typedef struct node *nodeptr;
-
-struct node {
+ struct node
+{
 	char *str;
 	int len;
-	nodeptr next;
+	struct node *next;
 };
 typedef struct node list_t;
 size_t print_list(const list_t *h);
