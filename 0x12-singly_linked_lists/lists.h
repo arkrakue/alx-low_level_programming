@@ -11,6 +11,8 @@
  * Description: Singly linked list node structure
  */
 
+int _putchar(char *c);
+
  struct node
 {
 	char *str;
