@@ -4,7 +4,7 @@
 
 /**
  * struct node - nodes for the linked list
- * @val: integer value to store
+ * @n: integer value to store
  * @next: pointer of the next node in linex
  */
 
