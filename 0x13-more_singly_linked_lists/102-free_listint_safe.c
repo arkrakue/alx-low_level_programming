@@ -1,44 +1,56 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "lists.h"
 
 /**
- * free_listint_safe - A function that frees a list
- * @h: A pointer listint_t structure
- * Return: The size of the list that was free'd
+ * free_listint_safe - frees a listint_t list
+ * @h: pointer to the head of the list
+ *
+ * Return: the size of the list that was freed
  */
 size_t free_listint_safe(listint_t **h)
 {
-	size_t counter = 0;
-	listint_t *temp;
+	size_t count = 0;
+	listint_t *slow, *fast, *temp;
 
-	temp = *h;
-	while (temp)
+	if (h == NULL || *h == NULL)
+		return (0);
+
+	slow = *h;
+	fast = *h;
+
+	while (slow && fast && fast->next)
 	{
-		temp = *h;
-		temp = temp->next;
-		free_list(temp);
-		counter++;
+		slow = slow->next;
+		fast = fast->next->next;
+
+		if (slow == fast)
+		{
+			temp = slow;
+			do {
+				temp = temp->next;
+				count++;
+			} while (temp != slow);
+
+			temp = *h;
+			while (temp != slow)
+			{
+				temp = temp->next;
+				count++;
+			}
+
+			*h = NULL;
+			return (count);
+		}
 	}
-	*h = NULL;
 
-	return (counter);
-}
-
-/**
- * free_list - A function that frees a listint_t recursively
- * @head: A pointer to the listint_t structure
- * Return: Nothing
- */
-void free_list(listint_t *head)
-{
-	listint_t *temp;
-
-	if (head)
+	while (*h)
 	{
-		temp = head;
-		temp = temp->next;
-		free(temp);
-		free_list(temp);
+		temp = (*h)->next;
+		free(*h);
+		*h = temp;
+		count++;
 	}
-	free(head);
+
+	return (count);
 }
