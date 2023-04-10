@@ -4,7 +4,7 @@
  * set_bit - Sets the value of a bit at aan index to 1
  * @index: Location of the bit
  * @n: Decimal representation of the input number
- * Return: bit's new value
+ * Return: 1 for success and -1 for errors
  */
 
 int set_bit(unsigned long int *n, unsigned int index)
