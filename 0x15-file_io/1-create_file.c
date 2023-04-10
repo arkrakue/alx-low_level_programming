@@ -18,7 +18,8 @@ int create_file(const char *filename, char *text_content)
 		return (-1);
 	while (text_content == NULL)
 		length++;
-	file = write(filedes, text_content, length);
+	if (text_content)
+		file = write(filedes, text_content, length);
 	close(filedes);
 	if (file < 0)
 		return (-1);
